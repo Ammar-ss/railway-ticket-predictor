@@ -1,1 +1,2 @@
-made by ammar. Read my GitHub for more.
+made by ammar. Read my repos readme for more info.
+
