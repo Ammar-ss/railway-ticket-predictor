@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Ticket Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Railway Ticket Confirmation Predictor</h1>
+            <p>Enter the details below to predict the confirmation probability of your ticket.</p>
+        </header>
+        <main>
+            <form id="prediction-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="train-number">Train Number</label>
+                        <input type="number" id="train-number" name="Train Number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date-of-journey">Date of Journey</label>
+                        <input type="date" id="date-of-journey" name="Date of Journey" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="class-of-travel">Class of Travel</label>
+                        <select id="class-of-travel" name="Class of Travel" required>
+                            <option value="3AC">3AC</option>
+                            <option value="2AC">2AC</option>
+                            <option value="1AC">1AC</option>
+                            <option value="Sleeper">Sleeper</option>
+                            <option value="Chair Car">Chair Car</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quota">Quota</label>
+                        <select id="quota" name="Quota" required>
+                            <option value="General">General</option>
+                            <option value="Tatkal">Tatkal</option>
+                            <option value="Premium Tatkal">Premium Tatkal</option>
+                            <option value="Ladies">Ladies</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="source-station">Source Station</label>
+                        <input type="text" id="source-station" name="Source Station" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination-station">Destination Station</label>
+                        <input type="text" id="destination-station" name="Destination Station" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="booking-date">Booking Date</label>
+                        <input type="date" id="booking-date" name="Booking Date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="num-passengers">Number of Passengers</label>
+                        <input type="number" id="num-passengers" name="Number of Passengers" required>
+                    </div>
+                </div>
+                <button type="submit" class="predict-button">Predict Confirmation</button>
+            </form>
+            <div id="prediction-result" class="prediction-result"></div>
+        </main>
+        <footer>
+            <p>Built by Ammar Bhilwarawala.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
